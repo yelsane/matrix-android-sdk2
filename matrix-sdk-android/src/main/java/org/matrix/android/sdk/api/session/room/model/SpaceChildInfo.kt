@@ -33,5 +33,6 @@ data class SpaceChildInfo(
         val suggested: Boolean?,
         val canonicalAlias: String?,
         val aliases: List<String>?,
-        val worldReadable: Boolean
+        val worldReadable: Boolean,
+        val joinRule: RoomJoinRules?
 )

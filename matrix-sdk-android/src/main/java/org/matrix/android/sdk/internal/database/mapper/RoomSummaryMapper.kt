@@ -105,7 +105,8 @@ internal class RoomSummaryMapper @Inject constructor(
                             suggested = it.suggested,
                             canonicalAlias = it.childSummaryEntity?.canonicalAlias,
                             aliases = it.childSummaryEntity?.aliases?.toList(),
-                            worldReadable = it.childSummaryEntity?.joinRules == RoomJoinRules.PUBLIC
+                            worldReadable = it.childSummaryEntity?.joinRules == RoomJoinRules.PUBLIC,
+                            joinRule = it.childSummaryEntity?.joinRules
                     )
                 },
                 directParentNames = roomSummaryEntity.directParentNames.toList(),

@@ -18,6 +18,7 @@ package org.matrix.android.sdk.internal.session.space
 
 import com.squareup.moshi.Json
 import com.squareup.moshi.JsonClass
+import org.matrix.android.sdk.api.session.room.model.RoomJoinRules
 import org.matrix.android.sdk.api.session.space.model.SpaceChildSummaryEvent
 
 /**
@@ -101,5 +102,8 @@ internal data class SpaceChildSummaryResponse(
          * Undocumented item.
          */
         @Json(name = "m.federate")
-        val isFederated: Boolean = false
+        val isFederated: Boolean = false,
+
+        @Json(name = "join_rule")
+        val joinRule: RoomJoinRules? = null
 )

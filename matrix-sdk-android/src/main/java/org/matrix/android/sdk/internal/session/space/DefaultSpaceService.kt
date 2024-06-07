@@ -226,7 +226,8 @@ internal class DefaultSpaceService @Inject constructor(
             suggested = content.suggested,
             canonicalAlias = summary.canonicalAlias,
             aliases = summary.aliases,
-            worldReadable = summary.isWorldReadable
+            worldReadable = summary.isWorldReadable,
+            joinRule = summary.joinRule
     )
 
     override suspend fun joinSpace(
